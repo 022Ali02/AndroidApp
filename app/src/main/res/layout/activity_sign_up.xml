@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Поле ввода логина -->
+    <EditText
+        android:id="@+id/etUsernameSignUp"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Username"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginTop="48dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Поле ввода пароля -->
+    <EditText
+        android:id="@+id/etPasswordSignUp"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/etUsernameSignUp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- Кнопка CREATE USER -->
+    <Button
+        android:id="@+id/btnCreateUser"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CREATE USER"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/etPasswordSignUp"
+        app:layout_constraintStart_toStartOf="@+id/etPasswordSignUp"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <!-- Текстовое поле для вывода результата (например, «User Created Successfully») -->
+    <TextView
+        android:id="@+id/tvSignUpStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Status"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnCreateUser"
+        app:layout_constraintStart_toStartOf="@+id/btnCreateUser"/>
+</androidx.constraintlayout.widget.ConstraintLayout>
